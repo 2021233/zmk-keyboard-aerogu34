@@ -23,6 +23,19 @@
  * console, so drop the node. */
 &board_cdc_acm_uart { status = "disabled"; };
 
+/* Auto mouse layer (AML) lives in the runtime processor so the DYA Studio
+ * Trackball tab's temp-layer toggle actually governs it. Previously this was
+ * a static &zip_temp_layer in the listener chain, which the Studio toggle
+ * could not reach - users reported AML staying on after disabling it.
+ * Defaults reproduce the old behavior: layer 4 (Mouse), instant on, off
+ * after 1 s of trackball inactivity. Studio edits persist via settings. */
+&mouse_runtime_input_processor {
+    temp-layer-enabled;
+    temp-layer = <4>;
+    temp-layer-activation-delay-ms = <0>;
+    temp-layer-deactivation-delay-ms = <1000>;
+};
+
 &scroll_runtime_input_processor {
     processor-label = "rscroll";
     x-codes = <INPUT_REL_X>;
@@ -48,13 +61,12 @@
          *   deadzone  - filter sub-threshold noise
          *   xy_transform - invert both axes (sensor-mounting orientation)
          *   mouse_runtime - DYA Studio runtime config (CPI / snipe / etc)
-         *   temp_layer 4 1000ms - auto-enable Mouse layer (4) on movement,
-         *     turn back off after 1s of trackball inactivity
+         *     (also owns the auto mouse layer - see the node override below;
+         *     a static &zip_temp_layer here would bypass the DYA Studio toggle)
          *   scroll_runtime - convert XY -> scroll on layer 3 only */
         input-processors = <&deadzone_processor
                             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
                             &mouse_runtime_input_processor
-                            &zip_temp_layer 4 1000
                             &scroll_runtime_input_processor>;
     };
 };
