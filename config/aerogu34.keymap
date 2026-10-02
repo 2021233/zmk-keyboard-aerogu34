@@ -91,10 +91,10 @@
         default_layer {
             display-name = "Default";
             bindings = <
-&none             &none           &none           &none  &none  &none          &none        &none                &none              &none
-&none             &kp S           &lt 0 D         &kp F  &none  &none          &kp J        &lt 0 K              &kp L              &none
-&mt LEFT_SHIFT Z  &mt LEFT_WIN X  &mt LEFT_ALT C  &kp V  &none  &none          &kp M        &mt RIGHT_ALT COMMA  &mt RIGHT_WIN DOT  &mt RIGHT_SHIFT SLASH
-&lt 0 SPACE       &lt 0 GRAVE                                   &kp BACKSPACE  &lt 1 ENTER
+&none            &none        &none               &none           &none  &none        &none            &none                &none              &none
+&none            &mt LSHFT W  &mt LEFT_CONTROL E  &mt LEFT_ALT T  &none  &none        &mt RIGHT_ALT U  &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O  &none
+&mt LEFT_GUI A   &kp S        &kp D               &kp G           &none  &none        &kp H            &kp J                &kp K              &mt RIGHT_GUI L
+&lt 0 BACKSPACE  &lt 0 SPACE                                             &lt 1 ENTER  &lt 1 ESCAPE
             >;
         };
 
