@@ -88,8 +88,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "Default";
+        default {
             bindings = <
 &none            &none        &none               &none           &none  &none        &none            &none                &none              &none
 &none            &mt LSHFT W  &mt LEFT_CONTROL E  &mt LEFT_ALT T  &none  &none        &mt RIGHT_ALT U  &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O  &none
@@ -99,11 +98,46 @@
         };
 
         number {
-            display-name = "Number";
             bindings = <
-&none         &none         &none         &none         &none  &none   &none           &none     &none      &none
-&none         &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none  &none   &mkp MB1        &kp UP    &mkp MB2   &none
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none   &kp LEFT        &kp DOWN  &kp RIGHT  &kp SLASH
+&trans            &trans                    &trans                      &trans                  &trans                        &trans         &trans                   &trans                 &trans                     &trans
+&trans            &cmt LEFT_SHIFT NUMBER_1  &cmt LEFT_CONTROL NUMBER_2  &cmt LEFT_ALT NUMBER_3  &trans                        &trans         &cmt RIGHT_ALT NUMBER_4  &cmt RIGHT_CONTROL N5  &cmt RIGHT_SHIFT NUMBER_6  &trans
+&cmt LEFT_GUI N7  &kp N8                    &kp N9                      &kp N0                  &trans                        &trans         &kp LEFT_ARROW           &kp DOWN_ARROW         &kp UP_ARROW               &cmt RIGHT_GUI RIGHT_ARROW
+&kp ESC       &kp DEL                                          &trans  &studio_unlock
+            >;
+        };
+
+        function {
+            bindings = <
+&trans            &trans              &trans                &trans            &trans                        &trans         &trans             &trans                 &trans               &trans
+&trans            &cmt LEFT_SHIFT F1  &cmt LEFT_CONTROL F2  &cmt LEFT_ALT F3  &trans                        &trans         &cmt RIGHT_ALT F4  &cmt RIGHT_CONTROL F5  &cmt RIGHT_SHIFT F6  &trans
+&cmt LEFT_GUI F7  &kp F8              &kp F9                &kp F10           &trans                        &trans         &kp PAGE_UP        &kp PAGE_DOWN          &kp HOME             &cmt RIGHT_GUI END
+&kp ESC       &kp DEL                                          &trans  &studio_unlock
+            >;
+        };
+
+        mouse {
+            bindings = <
+&trans        &trans          &trans            &trans        &trans                    &trans         &trans    &trans    &trans    &trans
+&trans        &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans                    &trans         &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&kp LEFT_GUI  &none           &none             &none         &trans                    &trans         &mkp MB4  &mkp MB5  &mo 4     &none
+&kp ESC       &kp DEL                                          &trans  &studio_unlock
+            >;
+        };
+
+        media {
+            bindings = <
+&trans  &trans          &trans            &trans        &trans                    &trans  &trans             &trans      &trans           &trans
+&trans  &kp K_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT    &trans                    &trans  &none              &none       &none            &trans
+&none   &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT    &trans                    &trans  &kp K_VOLUME_DOWN  &kp K_MUTE  &kp K_VOLUME_UP  &none
+&kp ESC       &kp DEL                                          &trans  &studio_unlock
+            >;
+        };
+
+        ble {
+            bindings = <
+&trans  &trans        &trans        &trans        &trans                    &trans  &trans        &trans        &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                    &trans  &bt BT_SEL 3  &bt BT_SEL 4  &none   &trans
+&none   &none         &none         &none         &trans                    &trans  &none         &none         &none   &none
 &kp ESC       &kp DEL                                          &trans  &studio_unlock
             >;
         };
