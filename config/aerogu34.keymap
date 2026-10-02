@@ -100,8 +100,8 @@
         number {
             bindings = <
 &trans            &trans                    &trans                      &trans                  &trans                        &trans         &trans                   &trans                 &trans                     &trans
-&trans            &cmt LEFT_SHIFT NUMBER_1  &cmt LEFT_CONTROL NUMBER_2  &cmt LEFT_ALT NUMBER_3  &trans                        &trans         &cmt RIGHT_ALT NUMBER_4  &cmt RIGHT_CONTROL N5  &cmt RIGHT_SHIFT NUMBER_6  &trans
-&cmt LEFT_GUI N7  &kp N8                    &kp N9                      &kp N0                  &trans                        &trans         &kp LEFT_ARROW           &kp DOWN_ARROW         &kp UP_ARROW               &cmt RIGHT_GUI RIGHT_ARROW
+&trans            &mt LEFT_SHIFT NUMBER_1  &mt LEFT_CONTROL NUMBER_2  &mt LEFT_ALT NUMBER_3  &trans                        &trans         &mt RIGHT_ALT NUMBER_4  &mt RIGHT_CONTROL N5  &mt RIGHT_SHIFT NUMBER_6  &trans
+&mt LEFT_GUI N7  &kp N8                    &kp N9                      &kp N0                  &trans                        &trans         &kp LEFT_ARROW           &kp DOWN_ARROW         &kp UP_ARROW               &mt RIGHT_GUI RIGHT_ARROW
 &kp ESC       &kp DEL                                          &trans  &studio_unlock
             >;
         };
@@ -109,8 +109,8 @@
         function {
             bindings = <
 &trans            &trans              &trans                &trans            &trans                        &trans         &trans             &trans                 &trans               &trans
-&trans            &cmt LEFT_SHIFT F1  &cmt LEFT_CONTROL F2  &cmt LEFT_ALT F3  &trans                        &trans         &cmt RIGHT_ALT F4  &cmt RIGHT_CONTROL F5  &cmt RIGHT_SHIFT F6  &trans
-&cmt LEFT_GUI F7  &kp F8              &kp F9                &kp F10           &trans                        &trans         &kp PAGE_UP        &kp PAGE_DOWN          &kp HOME             &cmt RIGHT_GUI END
+&trans            &mt LEFT_SHIFT F1  &mt LEFT_CONTROL F2  &mt LEFT_ALT F3  &trans                        &trans         &mt RIGHT_ALT F4  &mt RIGHT_CONTROL F5  &mt RIGHT_SHIFT F6  &trans
+&mt LEFT_GUI F7  &kp F8              &kp F9                &kp F10           &trans                        &trans         &kp PAGE_UP        &kp PAGE_DOWN          &kp HOME             &mt RIGHT_GUI END
 &kp ESC       &kp DEL                                          &trans  &studio_unlock
             >;
         };
