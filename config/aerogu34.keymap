@@ -45,164 +45,164 @@
 
         n {
             bindings = <&kp N>;
-            key-positions = <16 17>;
+            key-positions = <>;
             layers = <0>;
         };
 
         m {
             bindings = <&kp M>;
-            key-positions = <17 18>;
+            key-positions = <>;
             layers = <0>;
         };
 
         x {
             bindings = <&kp X>;
-            key-positions = <16 18>;
+            key-positions = <>;
             layers = <0>;
         };
 
         y {
-            bindings = <&clt 5 Y>;
-            key-positions = <27 28>;
+            bindings = <&lt 5 Y>;
+            key-positions = <>;
             layers = <0>;
             timeout-ms = <80>;
         };
 
         p {
             bindings = <&kp P>;
-            key-positions = <26 27>;
+            key-positions = <>;
             layers = <0>;
         };
 
         f {
             bindings = <&kp F>;
-            key-positions = <13 12>;
+            key-positions = <>;
             layers = <0>;
         };
 
         r {
             bindings = <&kp R>;
-            key-positions = <11 12>;
+            key-positions = <>;
             layers = <0>;
         };
 
         q {
             bindings = <&kp Q>;
-            key-positions = <11 13>;
+            key-positions = <>;
             layers = <0>;
         };
 
         v {
             bindings = <&kp V>;
-            key-positions = <22 23>;
+            key-positions = <>;
             layers = <0>;
         };
 
         c {
             bindings = <&kp C>;
-            key-positions = <21 22>;
+            key-positions = <>;
             layers = <0>;
         };
 
         backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <11 12>;
+            key-positions = <>;
             layers = <1>;
         };
 
         leftbracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <12 13>;
+            key-positions = <>;
             layers = <1>;
         };
 
         rightbraket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <16 17>;
+            key-positions = <>;
             layers = <1>;
         };
 
         slash {
             bindings = <&kp SLASH>;
-            key-positions = <17 18>;
+            key-positions = <>;
             layers = <1>;
         };
 
         medialayer {
             bindings = <&mo 4>;
-            key-positions = <20 29>;
+            key-positions = <>;
             layers = <0>;
         };
 
         colon {
             bindings = <&kp SEMICOLON>;
-            key-positions = <26 27>;
+            key-positions = <>;
             layers = <1>;
         };
 
         quote {
             bindings = <&kp SQT>;
-            key-positions = <27 28>;
+            key-positions = <>;
             layers = <1>;
         };
 
         z {
             bindings = <&kp Z>;
-            key-positions = <21 23>;
+            key-positions = <>;
             layers = <0>;
         };
 
         b {
             bindings = <&kp B>;
-            key-positions = <26 28>;
+            key-positions = <>;
             layers = <0>;
         };
 
         tilde {
             bindings = <&kp GRAVE>;
-            key-positions = <22 23>;
+            key-positions = <>;
             layers = <1>;
         };
 
         f11 {
             bindings = <&kp F11>;
-            key-positions = <21 22>;
+            key-positions = <>;
             layers = <2>;
         };
 
         f12 {
             bindings = <&kp F12>;
-            key-positions = <22 23>;
+            key-positions = <>;
             layers = <2>;
         };
 
         comma {
             bindings = <&kp COMMA>;
-            key-positions = <37 27>;
+            key-positions = <>;
             layers = <0>;
         };
 
         period {
             bindings = <&kp PERIOD>;
-            key-positions = <37 28>;
+            key-positions = <>;
             layers = <0>;
         };
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <11 12>;
+            key-positions = <>;
             layers = <2>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <17 18>;
+            key-positions = <>;
             layers = <2>;
         };
 
         caps {
             bindings = <&caps_word>;
-            key-positions = <11 18>;
+            key-positions = <>;
             layers = <0>;
         };
 
