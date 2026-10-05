@@ -78,5 +78,6 @@
          * steps of 38; driver rounds down. 800 maps to 21*38 = 798.
          * DYA Studio's runtime-input-processor can override at runtime. */
         res-cpi = <800>;
+        scroll-layers = <4>;
     };
 };
