@@ -40,7 +40,7 @@
     axis-snap-threshold = <200>;
 };
 
-/ {
+  {
     deadzone_processor: deadzone_processor {
         compatible = "zmk,input-processor-deadzone";
         #input-processor-cells = <0>;
