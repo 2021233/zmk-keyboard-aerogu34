@@ -77,7 +77,6 @@
         /* Boot-time sensor CPI (counts per inch). Valid range 608-4826 in
          * steps of 38; driver rounds down. 800 maps to 21*38 = 798.
          * DYA Studio's runtime-input-processor can override at runtime. */
-        snipe-layers = <2>;
-        scroll-layers = <4>;
+        res-cpi = <800>;
     };
 };
