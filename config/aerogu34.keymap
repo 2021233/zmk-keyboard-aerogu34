@@ -33,11 +33,15 @@
 #define JP_HANZEN       GRAVE             // 半角/全角
 
 &mt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <160>;
     flavor = "balanced";
+    quick-tap-ms = <150>;
 };
 
-&lt { quick-tap-ms = <300>; };
+&lt {
+    quick-tap-ms = <160>;
+    require-prior-idle-ms = <150>;
+};
 
 / {
     combos {
