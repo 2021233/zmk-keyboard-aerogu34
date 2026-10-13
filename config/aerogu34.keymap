@@ -137,7 +137,7 @@
 
         mouselayer {
             bindings = <&mo 3>;
-            key-positions = <20 29>;
+            key-positions = <20 21>;
             layers = <0>;
         };
 
