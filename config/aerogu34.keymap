@@ -135,8 +135,8 @@
             layers = <1>;
         };
 
-        medialayer {
-            bindings = <&mo 4>;
+        mouselayer {
+            bindings = <&mo 3>;
             key-positions = <20 29>;
             layers = <0>;
         };
@@ -212,12 +212,6 @@
             key-positions = <11 18>;
             layers = <0>;
         };
-
-        mouse {
-            bindings = <&mo 3>;
-            key-positions = <20 21>;
-            layers = <0>;
-        };
     };
 
     behaviors {
@@ -269,7 +263,7 @@
 &trans        &trans          &trans            &trans        &trans  &trans  &trans    &trans    &trans    &trans
 &trans        &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &none         &none           &none             &none         &trans  &trans  &mkp MB4  &mkp MB5  &none     &none
-&kp LEFT_GUI  &none                                                   &none   &none
+&kp LEFT_GUI  &mo 4                                                   &none   &none
             >;
         };
 
