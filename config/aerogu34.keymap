@@ -246,10 +246,10 @@
 
         mouse {
             bindings = <
-&trans        &trans          &trans            &trans        &trans  &trans          &trans        &trans    &trans    &trans
-&trans        &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &trans          &mkp MB1      &mkp MB3  &mkp MB2  &trans
-&kp LEFT_GUI  &none           &none             &none         &trans  &trans          &mkp MB4      &mkp MB5  &none     &none
-&trans        &none                                                   &msc SCRL_DOWN  &msc SCRL_UP
+&trans        &trans          &trans            &trans        &trans  &trans  &trans    &trans    &trans    &trans
+&trans        &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&kp LEFT_GUI  &none           &none             &none         &trans  &trans  &mkp MB4  &mkp MB5  &none     &none
+&trans        &none                                                   &none   &none
             >;
         };
 
