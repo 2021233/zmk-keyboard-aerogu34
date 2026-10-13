@@ -212,6 +212,26 @@
             key-positions = <11 18>;
             layers = <0>;
         };
+
+        mouse {
+            bindings = <&mo 3>;
+            key-positions = <20 21>;
+            layers = <0>;
+        };
+    };
+
+    behaviors {
+        mod_studio_unlock: mod_studio_unlock {
+            compatible = "zmk,behavior-hold-tap";
+            label = "msu";
+            bindings = <&kp>, <&studio_unlock>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <160>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <(-1)>;
+        };
     };
 
     keymap {
@@ -219,28 +239,28 @@
 
         default {
             bindings = <
-&none            &none        &none               &none           &none  &none        &none            &none                &none              &none
-&none            &mt LSHFT W  &mt LEFT_CONTROL E  &mt LEFT_ALT T  &none  &none        &mt RIGHT_ALT U  &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O  &none
-&mt LEFT_GUI A   &kp S        &kp D               &kp G           &none  &none        &kp H            &kp J                &kp K              &mt RIGHT_GUI L
-&lt 3 BACKSPACE  &lt 2 SPACE                                             &lt 1 ENTER  &lt 1 ESCAPE
+&none                   &none        &none               &none           &none  &none        &none                 &none                &none              &none
+&none                   &mt LSHFT W  &mt LEFT_CONTROL E  &mt LEFT_ALT T  &none  &none        &mt RIGHT_ALT U       &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O  &none
+&kp A                   &kp S        &kp D               &kp G           &none  &none        &kp H                 &kp J                &kp K              &kp L
+&mt LEFT_GUI BACKSPACE  &lt 2 SPACE                                             &lt 1 ENTER  &mt RIGHT_GUI ESCAPE
             >;
         };
 
         number {
             bindings = <
-&trans           &trans                   &trans                     &trans                 &trans  &trans  &trans                  &trans                &trans                    &trans
-&trans           &mt LEFT_SHIFT NUMBER_1  &mt LEFT_CONTROL NUMBER_2  &mt LEFT_ALT NUMBER_3  &trans  &trans  &mt RIGHT_ALT NUMBER_4  &mt RIGHT_CONTROL N5  &mt RIGHT_SHIFT NUMBER_6  &trans
-&mt LEFT_GUI N7  &kp N8                   &kp N9                     &kp N0                 &trans  &trans  &kp LEFT_ARROW          &kp DOWN_ARROW        &kp UP_ARROW              &mt RIGHT_GUI RIGHT_ARROW
-&kp DEL          &lt 2 TAB                                                                          &trans  &studio_unlock
+&trans               &trans                   &trans                     &trans                 &trans  &trans  &trans                          &trans                &trans                    &trans
+&trans               &mt LEFT_SHIFT NUMBER_1  &mt LEFT_CONTROL NUMBER_2  &mt LEFT_ALT NUMBER_3  &trans  &trans  &mt RIGHT_ALT NUMBER_4          &mt RIGHT_CONTROL N5  &mt RIGHT_SHIFT NUMBER_6  &trans
+&kp N7               &kp N8                   &kp N9                     &kp N0                 &trans  &trans  &kp LEFT_ARROW                  &kp DOWN_ARROW        &kp UP_ARROW              &kp RIGHT_ARROW
+&mt LEFT_GUI DELETE  &lt 2 TAB                                                                          &trans  &mod_studio_unlock RIGHT_GUI 0
             >;
         };
 
         function {
             bindings = <
-&trans           &trans             &trans               &trans           &trans  &trans        &trans            &trans                &trans              &trans
-&trans           &mt LEFT_SHIFT F1  &mt LEFT_CONTROL F2  &mt LEFT_ALT F3  &trans  &trans        &mt RIGHT_ALT F4  &mt RIGHT_CONTROL F5  &mt RIGHT_SHIFT F6  &trans
-&mt LEFT_GUI F7  &kp F8             &kp F9               &kp F10          &trans  &trans        &kp PAGE_UP       &kp PAGE_DOWN         &kp HOME            &mt RIGHT_GUI END
-&kp CLCK         &trans                                                           &lt 1 ESCAPE  &kp INS
+&trans                 &trans             &trans               &trans           &trans  &trans        &trans                &trans                &trans              &trans
+&trans                 &mt LEFT_SHIFT F1  &mt LEFT_CONTROL F2  &mt LEFT_ALT F3  &trans  &trans        &mt RIGHT_ALT F4      &mt RIGHT_CONTROL F5  &mt RIGHT_SHIFT F6  &trans
+&kp F7                 &kp F8             &kp F9               &kp F10          &trans  &trans        &kp PAGE_UP           &kp PAGE_DOWN         &kp HOME            &kp END
+&mt LEFT_GUI CAPSLOCK  &trans                                                           &lt 1 ESCAPE  &mt RIGHT_GUI INSERT
             >;
         };
 
@@ -248,8 +268,8 @@
             bindings = <
 &trans        &trans          &trans            &trans        &trans  &trans  &trans    &trans    &trans    &trans
 &trans        &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&kp LEFT_GUI  &none           &none             &none         &trans  &trans  &mkp MB4  &mkp MB5  &none     &none
-&trans        &none                                                   &none   &none
+&none         &none           &none             &none         &trans  &trans  &mkp MB4  &mkp MB5  &none     &none
+&kp LEFT_GUI  &none                                                   &none   &none
             >;
         };
 
@@ -264,10 +284,10 @@
 
         ble {
             bindings = <
-&trans      &trans        &trans        &trans        &trans  &trans  &trans          &trans        &trans  &trans
-&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &bt BT_SEL 3    &bt BT_SEL 4  &none   &trans
-&none       &none         &none         &none         &trans  &trans  &none           &none         &none   &none
-&bt BT_CLR  &none                                             &trans  &studio_unlock
+&trans        &trans          &trans            &trans        &trans  &trans  &trans          &trans        &trans  &trans
+&trans        &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &trans  &bt BT_SEL 3    &bt BT_SEL 4  &none   &trans
+&none         &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2  &trans  &trans  &none           &none         &none   &bt BT_CLR
+&kp LEFT_GUI  &none                                                   &trans  &studio_unlock
             >;
         };
     };
