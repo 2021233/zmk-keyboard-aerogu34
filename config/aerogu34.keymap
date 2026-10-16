@@ -243,7 +243,7 @@
             bindings = <
 &trans      &trans                   &trans                     &trans                 &trans  &trans  &trans                    &trans                &trans                    &trans
 &trans      &mt LEFT_SHIFT NUMBER_1  &mt LEFT_CONTROL NUMBER_2  &mt LEFT_ALT NUMBER_3  &trans  &trans  &mt RIGHT_ALT NUMBER_4    &mt RIGHT_CONTROL N5  &mt RIGHT_SHIFT NUMBER_6  &trans
-&kp N7      &kp N8                   &kp N9                     &kp N0                 &trans  &trans  &mt RIGHT_GUI LEFT_ARROW  &kp DOWN_ARROW        &kp UP_ARROW              &kp RIGHT_ARROW
+&kp N7      &kp N8                   &kp N9                     &mt LEFT_GUI N0        &trans  &trans  &mt RIGHT_GUI LEFT_ARROW  &kp DOWN_ARROW        &kp UP_ARROW              &kp RIGHT_ARROW
 &kp DELETE  &lt 2 TAB                                                                          &trans  &studio_unlock
             >;
         };
